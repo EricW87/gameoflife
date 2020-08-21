@@ -20,7 +20,7 @@ function iterate(cur_board)
             let n = getNeighbors(w, h, cur_board);
             if(state === alive)
                 console.log(n)
-            if(state === alive && n === 2 || n === 3) //rule #1
+            if(state === alive && (n === 2 || n === 3)) //rule #1
             {
                 console.log(n)
                 new_board.board[w][h].status = alive;
@@ -43,7 +43,6 @@ function getNeighbors(width, height, cur_board)
 {
     let n = 0;
     const alive = "alive";
-    const dead = "dead";
 
     if(width > 0) //there are tiles to the "west"
     {

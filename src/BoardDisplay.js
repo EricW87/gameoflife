@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import Board from './Board';
 
 
 const BoardDisplay = ({board, setBoard, started, turn}) => {
 
     async function setCell(i, j) {
-        if(turn > 0 || started == true)
+        if(turn > 0 || started === true)
             return;
 
         const new_board = new Board(board.width, board.height, board.board);

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Controls = ({turn, setTurn, started, setStarted}) => {
+const Controls = ({turn, setTurn, started, startGame, resetBoard}) => {
 
     function handleTurn(amount) {
         if(started === false || (turn === 0 && amount === -1))
@@ -12,7 +12,7 @@ const Controls = ({turn, setTurn, started, setStarted}) => {
     if(!started)
         return (
             <section className="controls-container">
-                <button onClick={() => setStarted(true)}>Start!</button>
+                <button onClick={() => startGame()}>Start!</button>
             </section>
         )
     else    
@@ -21,7 +21,7 @@ const Controls = ({turn, setTurn, started, setStarted}) => {
                 <div>{turn}</div>
                 <button onClick={() => handleTurn(1)}>+</button>
                 <button onClick={() => handleTurn(-1)}>-</button>
-                <button onClick={() => setStarted(false)}>Clear</button>
+                <button onClick={() => resetBoard}>Clear</button>
             </section>
         )
 } // Controls
