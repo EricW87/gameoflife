@@ -34,12 +34,18 @@ function App() {
   };
 
   function resetBoard() {
-      setStarted(false);
-      setTurn(0);
-      setGame([new Board(25, 25)]);
+    if(started === false)
+        return;
+      
+    setStarted(false);
+    setTurn(0);
+    setGame([new Board(25, 25)]);
   };
 
   function startGame() {
+    if(started === true)
+        return;
+
     const boards = [game[0]];
 
     for(let i = 0; i < 10; i++)

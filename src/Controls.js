@@ -21,7 +21,7 @@ const Controls = ({turn, setTurn, started, startGame, resetBoard}) => {
                 <div>{turn}</div>
                 <button onClick={() => handleTurn(1)}>+</button>
                 <button onClick={() => handleTurn(-1)}>-</button>
-                <button onClick={() => resetBoard}>Clear</button>
+                <button onClick={() => resetBoard()}>Clear</button>
             </section>
         )
 } // Controls

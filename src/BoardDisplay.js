@@ -32,9 +32,9 @@ const BoardDisplay = ({board, setBoard, started, turn}) => {
         <section className="board-container">
             {  
                 board.board.map((row, rindex) =>
-                    <div className="board-column">
+                    <div key={Math.random()} className="board-column">
                         {row.map((cell, cindex) => 
-                            <div key={rindex + cindex} className="cell" onClick={() => setCell(rindex, cindex)} style={cell.status === "alive" ? {backgroundColor: "black"} : {backgroundColor: "white"} } >
+                            <div key={Math.random()} className="cell" onClick={() => setCell(rindex, cindex)} style={cell.status === "alive" ? {backgroundColor: "black"} : {backgroundColor: "white"} } >
                             </div>
                         )}
                     </div>
