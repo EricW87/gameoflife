@@ -1,13 +1,201 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  font-size: 10px;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html body {
+  text-align: center;
+  margin: 0 auto;
+}
+.title-container h1 {
+  font-size: 3rem;
+}
+.title-container h3 {
+  font-size: 1.3rem;
+}
+.controls-container {
+  width: 100%;
+  height: 100px;
+  margin: 10px auto;
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+.controls-container div {
+  width: 100%;
+  height: 100%;
+}
+.controls-container .start-button-container {
+  height: 100%;
+}
+.controls-container .start-button-container .start-button {
+  width: 80%;
+  height: 80%;
+  margin: 10px auto;
+  font-size: 2rem;
+}
+.controls-container .start-instructions-container span {
+  display: block;
+  margin: 15px 10px 0px;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.controls-container .turn-counter span {
+  display: block;
+  margin: 15px 10px 0px;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.controls-container .turn-container {
+  display: flex;
+  justify-content: space-between;
+}
+.controls-container .clear-button {
+  display: flex;
+  justify-content: flex-end;
+}
+.controls-container .clear-button button {
+  margin: 10px;
+}
+.controls-container button {
+  height: 80%;
+  margin: 10px auto;
+  width: 40%;
+  font-size: 2.1vw;
+}
+.board-container {
+  width: 100%;
+  height: 100vw;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  border-top: solid black 1px;
+  overflow: hidden;
+}
+.board-column {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  border-bottom: solid black 1px;
+  border-left: solid black 1px;
+}
+.cell {
+  height: 100%;
+  width: 100%;
+  font-size: 1.5vh;
+  border-right: solid black 1px;
+}
+.presets-section {
+  background-color: lightgrey;
+}
+.presets-section .presets-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.presets-section .presets-container .board-container {
+  width: 40vw;
+  height: 40vw;
+  margin: 10px auto;
+}
+.animate-container {
+  height: 100px;
+  background-color: lightgrey;
+}
+.options-container {
+  height: 100px;
+  background-color: lightgrey;
+}
+.rules-container {
+  font-size: 1.5rem;
+  background-color: lightgrey;
+}
+.about-container {
+  font-size: 1.5rem;
+  background-color: lightgrey;
+}
+@media (min-width: 500px) {
+  .board-container {
+    width: 95%;
+    height: 95vw;
+  }
+  .controls-container,
+  .animate-container,
+  .rules-container,
+  .options-container,
+  .presets-section,
+  .about-container {
+    margin: 0 auto;
+    width: 95%;
+    min-height: 100px;
+    height: auto;
+  }
+  .controls-container {
+    height: 100px;
+  }
+}
+@media (min-width: 1279px) {
+  .outer-flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .inner-flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 45%;
+    height: 50vw;
+    flex-grow: 0;
+  }
+  .inner-flex-container .controls-container {
+    flex-grow: 0;
+    margin: 0;
+    max-width: 500px;
+    height: 80px;
+    min-height: 0;
+  }
+  .inner-flex-container .controls-container button {
+    width: 70px;
+    height: 70px;
+    font-size: 1.2rem;
+  }
+  .inner-flex-container .animate-container {
+    margin: 15px 0;
+    max-width: 500px;
+    height: 100px;
+  }
+  .inner-flex-container .options-container {
+    margin: 0;
+    margin-bottom: 15px;
+    max-width: 500px;
+    height: 100px;
+  }
+  .inner-flex-container .presets-section {
+    margin: 0;
+    width: 100%;
+    height: auto;
+  }
+  .inner-flex-container .presets-section .presets-container {
+    margin: 0 auto;
+    width: 100%;
+    height: 95%;
+    flex-grow: 1;
+  }
+  .inner-flex-container .presets-section .presets-container .board-container {
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+  }
+  .board-container {
+    width: 50%;
+    height: 50vw;
+    margin: 0;
+  }
+  .rules-container,
+  .about-container {
+    width: 100%;
+  }
 }

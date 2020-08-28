@@ -18,11 +18,11 @@ function iterate(cur_board)
                 state = alive;
 
             let n = getNeighbors(w, h, cur_board);
-            if(state === alive)
-                console.log(n)
+            //if(state === alive)
+                //console.log(n)
             if(state === alive && (n === 2 || n === 3)) //rule #1
             {
-                console.log(n)
+                //console.log(n)
                 new_board.board[w][h].status = alive;
             }
             else if(state === dead && n === 3) //rule #2

@@ -1,5 +1,6 @@
 import React from 'react';
 import Board from './Board';
+import sleep from './sleep.js';
 
 
 const BoardDisplay = ({board, setBoard, started, turn}) => {
@@ -21,9 +22,7 @@ const BoardDisplay = ({board, setBoard, started, turn}) => {
         setBoard(new_board);
     }
 
-    function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
+
 
     if(board === undefined || !board.ready)
         return <div>Loading...</div>
